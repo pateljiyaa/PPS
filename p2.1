@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int main()
+{
+    int a, b, c;
+    printf("enter the three numbers");
+    scanf("%d%d%d", &a, &b, &c);
+    if(a==b && b==c)
+    {
+       printf("a and b and c are same %d\n", a=b=c);
+    }
+    else if(a>=b && a>=c)
+    {
+       printf("a is bigger %d\n", a);
+    }
+    else if(b>=a && b>=c)
+    {
+       printf("b is bigger %d\n", b);
+    }
+    else
+    {
+       printf("c is bigger %d\n", c);
+    }
+    return 0;
+}
