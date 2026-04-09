@@ -1,0 +1,112 @@
+#include<stdio.h>
+int main()
+{
+    int num, num1, a, b, c, sum, reminder;
+    do
+    {
+       printf("\n 1. check even or odd:");
+       printf("\n 2. check positive or negative:");
+       printf("\n 3. find greatest of three:");
+       printf("\n 4. sum of digits:");
+       printf("\n 5. exit the program:");
+       printf("\n enter the value:");
+       scanf("%d", &num);
+
+       switch(num)
+
+       {
+             case 1:
+
+             printf("enter the value:");
+             scanf("%d", &num1);
+
+             if(num %2 == 0)
+             {
+                printf("\n number is even");
+             }
+             else
+             {
+                printf("\n number is odd");
+             }
+             break;
+
+
+             case 2:
+
+             printf("enter the value:");
+             scanf("%d", &num1);
+
+             if(num > 0)
+             {
+                printf("\n number is positive");
+             }
+             else if(num < 0)
+             {
+                printf("\n number is negative");
+             }
+             else
+             {
+                printf("\n number is zero");
+             }
+             break;
+
+
+             case 3:
+
+             printf("enter the three numbers:");
+             scanf("%d %d %d", &a, &b, &c);
+
+             if(a>b && a>c)
+             {
+                printf("\n %d is bigger", a);
+             }
+             else if(b>a && b>c)
+             {
+                printf("\n %d is bigger", b);
+             }
+             else if(a==b && b==c)
+             {
+                printf("\n all numbers are equal");
+             }
+             else if(a==b && b==c && c==a)
+             {
+                printf("\n two numbers are equal");
+             }
+             else
+             {
+                printf("\n %d is bigger", c);
+             }
+             break;
+
+
+             case 4:
+
+             printf("enter the value:");
+             scanf("%d", &num1);
+             sum=0;
+
+             while(num!=0)
+             {
+                reminder = num%10;
+                sum = sum + reminder;
+                num = num/10;
+             }
+
+             printf("sum of digits=%d", sum);
+             break;
+
+
+             case 5:
+
+             printf("exit the program");
+             break;
+
+             defult:
+             printf("invalid number");
+
+       }
+    }
+
+    while(num!=5);
+    return 0;
+}
